@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TheSolarPower.info</title>
+  <link rel="shortcut icon" type="image/jpg" href="soloarlogo.png"/>
+		<link rel="stylesheet" href="solar.css" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body onload="storeurl()">
+  <div class="chita">
+<!-- MultiStep Form -->
+<div id="up" class="row">
+  <div class="col-md-1 "></div>
+    <div class="col-md-10 col-md-offset-3">
+        <form id="lp_form" class="msform" action="https://eeltracklp.leadspediatrack.com/post.do">
+            <!-- progressbar -->
+            <img class="sun1" src ="soloarlogo.png">
+            <br><br>    
+            <h1><b>Save With Solar</b></h1>
+            <p>Answer 9 Quick and easy Question to compare Quotes from Top-Rated Solar installers.</p>
+            
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">How much is your energy bill?</h2>
+                <p class="pwala">Choose the most relevant option for you:</p>
+                <p class="pwala">$100 - $200</p>
+                <!-- range slider -->
+                 
+                  <!-- <input type="range" id="rangeSlider" class="centered" min="0" max="200" step="1" value="0" oninput="updateValue(this.value)" onchange="updateValue(this.value)">
+                  <output id="sliderVal"> </output>
+                  <p class="pwala"> Value: <span id="rangeValue">0%</span></p> -->
+                    <input type="range"  id="rangeSlider" name="average_monthly_utility_bill" min="100" max="200" onchange="updateTextInput(this.value);" oninput="updateValue(this.value)" onchange="updateValue(this.value)">
+                       <p class="pwala"> Value: <span id="rangeValue">$100</span></p>
+                  <script type="text/javascript">
+                    
+                    function updateValue(newValue){    document.getElementById("rangeValue").innerHTML = "$" + newValue;
+                     
+                            }
+                            function updateTextInput(val) {
+                                    document.getElementById('textInput').value=val; 
+                                  }
+                  </script>
+                <!-- range slider khtm -->
+                <input type="button" name="next" class="next action-button" value="Get Started"/>
+                <h2 class="fs-title">Join the 120,480 home owners that</h2>
+                <h2 class="fs-title">switched to solar in 2020</h2>
+                <br><br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">How much sun hits your roof?</h2>
+                <p class="pwala">Choose the most relevant option for you:</p><br>
+                <div class="container">
+                                      <div>
+                                        <input type="radio" id="control_01" name="roof_shade" value="fullsun" >
+                                        <label class="laclii" for="control_01">
+                                          <div class="obj"><img class="sun" src ="sun1.png"></div>
+                                        </label>
+                                    </div>
+                                     <div>
+                                        <input type="radio" id="control_02" name="roof_shade" value="partlyshaded" >
+                                        <label class="laclii" for="control_02">
+                                          <div class="obj"><img class="sun" src ="sun2.png"></div>
+                                        </label>
+                                    </div>
+                                     <div>
+                                        <input type="radio" id="control_03" name="roof_shade" value="mostlyshaded" >
+                                        <label class="laclii" for="control_03">
+                                          <div class="obj"><img class="sun" src ="sun3.png"></div>
+                                        </label>
+                                    </div>
+                                     <div>
+                                        <input type="radio" id="control_04" name="roof_shade" value="notsure" >
+                                        <label class="laclii" for="control_04">
+                                          <div class="obj"><img class="sun" src ="qus.png"></div>
+                                        </label>
+                                    </div>
+                  
+                  
+                  
+               </div><br>
+               <div class="container">
+                 <div ><p class="pwala">Full sun</p></div>
+                  <div ><p class="pwala">Partly Shaded</p></div>
+                  <div ><p class="pwala">Mostly shaded</p></div>
+                  <div ><p class="pwala">Not Sure</p></div>
+               </div>
+                
+                <input type="button" name="next" class="next action-button" value="Next"/><br><br>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Whats Your Address?</h2>
+                <p class="pwala">This will help us find and compare contractors in your areas.</p>
+                <br><br>
+                    <input style="width: 70%;" type="text" name="address" placeholder="Address"/><br>
+                    <input style="width: 70%;" type="text" name="email_address" placeholder="Enter Email Address Manually"/><br><br>
+                    <h5 class="pwala" >I am the homeowner</h5><br>
+                    <select style="width: 70%;" name="homeowner" id="homeowner">
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                <input type="button" name="next" class="next action-button" value="Next"/><br><br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Whats Your Address?</h2>
+                <p class="pwala">This will help us find and compare contractors in your areas.</p>
+                <br>
+                    <input class="buuttoon"  type="text" name="address" placeholder="Address 2"/>
+                    <input class="buuttoon" type="text" name="city" placeholder="City"/>
+                    <input class="buuttoon" type="text" name="state" placeholder="State"/>
+                    <input class="buuttoon" type="text" name="zip_code" placeholder="Zip"/>
+                     <input type="button" name="next" class="next action-button" value="CONTINUE"/><br>
+                    
+                    <br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Who Is Your Energy Provider?</h2>
+                <p class="pwala">Choose your provider or enter it below:</p>
+                <br><br>
+                <!-- select -->
+
+                 <select name="utility_provider" id="selectbox">
+                  <option  name="utility_provider" >  Unsure/Not Listed   </option>
+<option  name="utility_provider" >  AECO (Alabama Electric Company)   </option>
+<option  name="utility_provider" >  Alabama Power   </option>
+<option  name="utility_provider" >  Alameda Municipal Power   </option>
+<option  name="utility_provider" >  Alaska Villages Electric Cooperative    </option>
+<option  name="utility_provider" >  Allegheny Power   </option>
+<option  name="utility_provider" >  Alliant Energy    </option>
+<option  name="utility_provider" >  Ambit Energy    </option>
+<option  name="utility_provider" >  Ameren    </option>
+<option  name="utility_provider" >  American Electric Power   </option>
+<option  name="utility_provider" >  Amigo Energy    </option>
+<option  name="utility_provider" >  Anaheim Public Utilities    </option>
+<option  name="utility_provider" >  Appalachian Power   </option>
+<option  name="utility_provider" >  Arizona Public Service    </option>
+<option  name="utility_provider" >  Ashland Electric    </option>
+<option  name="utility_provider" >  Atlantic City Electric    </option>
+<option  name="utility_provider" >  Austin Energy   </option>
+<option  name="utility_provider" >  Avista Utilities    </option>
+<option  name="utility_provider" >  Azusa Light & Water   </option>
+<option  name="utility_provider" >  Baltimore Gas & Electric    </option>
+<option  name="utility_provider" >  Bangor Hydro Electric   </option>
+<option  name="utility_provider" >  Basin Electric Power Cooperative    </option>
+<option  name="utility_provider" >  Batavia Municipal Electric    </option>
+<option  name="utility_provider" >  Bear Valley Electric    </option>
+<option  name="utility_provider" >  Beauregard Electric CO-OP   </option>
+<option  name="utility_provider" >  Benton PUD    </option>
+<option  name="utility_provider" >  Berea Municipal Utilities   </option>
+<option  name="utility_provider" >  Berkeley Electric Cooperative   </option>
+<option  name="utility_provider" >  Berkshire Company   </option>
+<option  name="utility_provider" >  Big Rivers Electric Corporation   </option>
+<option  name="utility_provider" >  Black Hills Energy    </option>
+<option  name="utility_provider" >  Black Hills Power   </option>
+<option  name="utility_provider" >  Blue Grass Energy   </option>
+<option  name="utility_provider" >  Blue Ridge Electrical Membership Corp.    </option>
+<option  name="utility_provider" >  Borough of Ellwood City   </option>
+<option  name="utility_provider" >  Bounce Energy   </option>
+<option  name="utility_provider" >  Braintree Electric Light Department   </option>
+<option  name="utility_provider" >  Brigham City Public Power   </option>
+<option  name="utility_provider" >  Brunswick EMC   </option>
+<option  name="utility_provider" >  Bryan Texas Utilities   </option>
+<option  name="utility_provider" >  Burbank Water & Power   </option>
+<option  name="utility_provider" >  Caddo Electric Cooperative    </option>
+<option  name="utility_provider" >  California Public Utilities Commission    </option>
+<option  name="utility_provider" >  Calpine   </option>
+<option  name="utility_provider" >  Canby Electric    </option>
+<option  name="utility_provider" >  Carteret-Craven Electric Cooperative    </option>
+<option  name="utility_provider" >  CenterPoint Energy    </option>
+<option  name="utility_provider" >  Central Electric Power Cooperative    </option>
+<option  name="utility_provider" >  Central Hudson Gas & Electric   </option>
+<option  name="utility_provider" >  Central Maine Power   </option>
+<option  name="utility_provider" >  Central Montana Electric Power Cooperative    </option>
+<option  name="utility_provider" >  Central Power Electric Cooperative    </option>
+<option  name="utility_provider" >  Central Vermont Public Service    </option>
+<option  name="utility_provider" >  CH Energy Group   </option>
+<option  name="utility_provider" >  Champion Energy Services    </option>
+<option  name="utility_provider" >  Chariton Valley Electric Cooperative    </option>
+<option  name="utility_provider" >  Chelan County Public Utility District   </option>
+<option  name="utility_provider" >  Cherokee Electric Cooperative   </option>
+<option  name="utility_provider" >  Cheyenne Light Fuel & Power   </option>
+<option  name="utility_provider" >  Choptank Electric Cooperative   </option>
+<option  name="utility_provider" >  Chugach Electric Association    </option>
+<option  name="utility_provider" >  Cincinnati Bell Energy    </option>
+<option  name="utility_provider" >  Cirro Energy    </option>
+<option  name="utility_provider" >  Citizens Choice Energy Jamestown BPU    </option>
+<option  name="utility_provider" >  Citizens Electric of Lewisburg    </option>
+<option  name="utility_provider" >  Citizens Utilities Board    </option>
+<option  name="utility_provider" >  City & County of San Francisco    </option>
+<option  name="utility_provider" >  City of Dover Electric Department   </option>
+<option  name="utility_provider" >  City of Milford Electric Department   </option>
+<option  name="utility_provider" >  City of Palo Alto Utilities   </option>
+<option  name="utility_provider" >  City of Rock Hill   </option>
+<option  name="utility_provider" >  City of Safford Electric Department   </option>
+<option  name="utility_provider" >  City of Tallahassee Utilities   </option>
+<option  name="utility_provider" >  City of Vero Beach    </option>
+<option  name="utility_provider" >  City Utilities of Springfield   </option>
+<option  name="utility_provider" >  Claverack REC   </option>
+<option  name="utility_provider" >  Clay Electric Co-op   </option>
+<option  name="utility_provider" >  Clearwater Power    </option>
+<option  name="utility_provider" >  CLECO   </option>
+<option  name="utility_provider" >  Cleveland Electric Illuminating Company   </option>
+<option  name="utility_provider" >  Coast Electric    </option>
+<option  name="utility_provider" >  College Station Utilities   </option>
+<option  name="utility_provider" >  Colorado Springs Utilities    </option>
+<option  name="utility_provider" >  Colton Public Utilities Glendale Public Service Department    </option>
+<option  name="utility_provider" >  Columbia REA    </option>
+<option  name="utility_provider" >  Columbia River Public Utility District    </option>
+<option  name="utility_provider" >  ComEd Electric Company    </option>
+<option  name="utility_provider" >  Connecticut Light & Power   </option>
+<option  name="utility_provider" >  Connecticut Natural Gas   </option>
+<option  name="utility_provider" >  Consolidated Edison Company of New York (Con Edison)    </option>
+<option  name="utility_provider" >  Consolidated Electric Cooperative   </option>
+<option  name="utility_provider" >  Consumers Energy    </option>
+<option  name="utility_provider" >  Copper Valley Electric Association    </option>
+<option  name="utility_provider" >  Coserv Electric   </option>
+<option  name="utility_provider" >  Coweta Fayette EMC    </option>
+<option  name="utility_provider" >  CPS Energy    </option>
+<option  name="utility_provider" >  Dairyland Power Co-op   </option>
+<option  name="utility_provider" >  Danville Utilities    </option>
+<option  name="utility_provider" >  Dayton Power & Light    </option>
+<option  name="utility_provider" >  Delaware Electric Cooperative   </option>
+<option  name="utility_provider" >  Delmarva Power    </option>
+<option  name="utility_provider" >  DEMCO   </option>
+<option  name="utility_provider" >  Denton Municipal Electric   </option>
+<option  name="utility_provider" >  Direct Energy   </option>
+<option  name="utility_provider" >  Dominion Virginia Power   </option>
+<option  name="utility_provider" >  Douglas County Public Utility District    </option>
+<option  name="utility_provider" >  dPi Energy    </option>
+<option  name="utility_provider" >  DTE Energy (Detroit Edison)   </option>
+<option  name="utility_provider" >  Duke Energy   </option>
+<option  name="utility_provider" >  Duke Energy Indiana   </option>
+<option  name="utility_provider" >  Duke Energy Kentucky    </option>
+<option  name="utility_provider" >  Duke Energy NC    </option>
+<option  name="utility_provider" >  Duke Energy Ohio    </option>
+<option  name="utility_provider" >  Duke Energy SC    </option>
+<option  name="utility_provider" >  Duncan Valley Electric Cooperative    </option>
+<option  name="utility_provider" >  Duquesne Light    </option>
+<option  name="utility_provider" >  East River Electric Cooperative   </option>
+<option  name="utility_provider" >  East River Electric Power Co-op   </option>
+<option  name="utility_provider" >  Eau Claire Energy Cooperative   </option>
+<option  name="utility_provider" >  El Paso Electric    </option>
+<option  name="utility_provider" >  Electric Database Publishing    </option>
+<option  name="utility_provider" >  Electric Power Board    </option>
+<option  name="utility_provider" >  Electrical District No. 2   </option>
+<option  name="utility_provider" >  ElectriCities   </option>
+<option  name="utility_provider" >  Emerald PUD   </option>
+<option  name="utility_provider" >  Empire District Electric Company    </option>
+<option  name="utility_provider" >  Entergy   </option>
+<option  name="utility_provider" >  Entrust Energy    </option>
+<option  name="utility_provider" >  Eugene Water & Electric Board   </option>
+<option  name="utility_provider" >  Everything Energy   </option>
+<option  name="utility_provider" >  Excel Energy    </option>
+<option  name="utility_provider" >  Farmers Electrical Cooperative    </option>
+<option  name="utility_provider" >  Farmington Electric Utility System    </option>
+<option  name="utility_provider" >  First Electric Cooperative    </option>
+<option  name="utility_provider" >  First Texas Energy Corporation    </option>
+<option  name="utility_provider" >  FirstEnergy   </option>
+<option  name="utility_provider" >  Fleming-Mason Energy Cooperative    </option>
+<option  name="utility_provider" >  Flint Energies    </option>
+<option  name="utility_provider" >  Florida Municipal Power Agency    </option>
+<option  name="utility_provider" >  Florida Power & Light   </option>
+<option  name="utility_provider" >  Florida Public Utility Company Palm Beach   </option>
+<option  name="utility_provider" >  Gainesville Regional Utilities    </option>
+<option  name="utility_provider" >  Garland Power and Light   </option>
+<option  name="utility_provider" >  Georgetown Utility Services (GUS)   </option>
+<option  name="utility_provider" >  Georgia EMC   </option>
+<option  name="utility_provider" >  Georgia Power   </option>
+<option  name="utility_provider" >  Gexa Energy   </option>
+<option  name="utility_provider" >  Golden Valley Electric Association    </option>
+<option  name="utility_provider" >  Granite State Electric    </option>
+<option  name="utility_provider" >  Grant County Public Utility District    </option>
+<option  name="utility_provider" >  Great River Energy    </option>
+<option  name="utility_provider" >  Green Island Power Authority    </option>
+<option  name="utility_provider" >  Green Mountain Energy   </option>
+<option  name="utility_provider" >  Green Mountain Power    </option>
+<option  name="utility_provider" >  Gridley Municipal Utilities   </option>
+<option  name="utility_provider" >  Guadalupe Valley Electric Cooperative   </option>
+<option  name="utility_provider" >  Gulf Power    </option>
+<option  name="utility_provider" >  GVEC    </option>
+<option  name="utility_provider" >  Halifax Electric Membership   </option>
+<option  name="utility_provider" >  Hawaiian Electric Company (HECO)    </option>
+<option  name="utility_provider" >  Hawaiian Electric Industries    </option>
+<option  name="utility_provider" >  Healdsburg Municipal Electric Department    </option>
+<option  name="utility_provider" >  Henderson Municipal Power and Light   </option>
+<option  name="utility_provider" >  High Plains Power   </option>
+<option  name="utility_provider" >  High West Energy    </option>
+<option  name="utility_provider" >  Highline Electric Association   </option>
+<option  name="utility_provider" >  Holden Municipal Light Department   </option>
+<option  name="utility_provider" >  Holland Board of Public Works   </option>
+<option  name="utility_provider" >  Holy Cross Energy Company   </option>
+<option  name="utility_provider" >  Howard Electric Cooperative   </option>
+<option  name="utility_provider" >  Hutchinson Utilities Commission   </option>
+<option  name="utility_provider" >  Hyrum City Power & Light    </option>
+<option  name="utility_provider" >  IDACORP   </option>
+<option  name="utility_provider" >  Idaho Power   </option>
+<option  name="utility_provider" >  Imperial Irrigation District    </option>
+<option  name="utility_provider" >  Independence Power and Light    </option>
+<option  name="utility_provider" >  Indianapolis Power & Light    </option>
+<option  name="utility_provider" >  Intermountain Power Agency    </option>
+<option  name="utility_provider" >  Intermountain Rural Electric Association    </option>
+<option  name="utility_provider" >  International Electric Power (IEP)    </option>
+<option  name="utility_provider" >  Interstate Power and Light Company    </option>
+<option  name="utility_provider" >  ITC Midwest   </option>
+<option  name="utility_provider" >  Jackson   </option>
+<option  name="utility_provider" >  JEA   </option>
+<option  name="utility_provider" >  Jersey Central Power and Light Company    </option>
+<option  name="utility_provider" >  Jones-Onslow EMC    </option>
+<option  name="utility_provider" >  Just Energy   </option>
+<option  name="utility_provider" >  Kansas City Board of Public Utilities   </option>
+<option  name="utility_provider" >  Kansas City Power & Light   </option>
+<option  name="utility_provider" >  Kauai Island Utility Cooperative (KIUC)   </option>
+<option  name="utility_provider" >  Kaysville City    </option>
+<option  name="utility_provider" >  Kenergy Corp    </option>
+<option  name="utility_provider" >  Kentucky Utilities    </option>
+<option  name="utility_provider" >  Kingsport Power (Appalachian Power)   </option>
+<option  name="utility_provider" >  Kissimmee Utility Authority   </option>
+<option  name="utility_provider" >  Klickitat Public Utility District   </option>
+<option  name="utility_provider" >  Knoxville Utilities Board   </option>
+<option  name="utility_provider" >  Kodiak Electric Association   </option>
+<option  name="utility_provider" >  L&O Power Co-op   </option>
+<option  name="utility_provider" >  La Plata Electric Association   </option>
+<option  name="utility_provider" >  Lafayette Utilities System    </option>
+<option  name="utility_provider" >  Lake Country Power    </option>
+<option  name="utility_provider" >  Lake Worth Utilities    </option>
+<option  name="utility_provider" >  Lakeland Electric   </option>
+<option  name="utility_provider" >  Lamar Light and Power   </option>
+<option  name="utility_provider" >  Lansing Board of Water & Light    </option>
+<option  name="utility_provider" >  LCEC    </option>
+<option  name="utility_provider" >  Lenoir City Utilities Board   </option>
+<option  name="utility_provider" >  Little River Electric Co-Op   </option>
+<option  name="utility_provider" >  Lodi Electric Utility   </option>
+<option  name="utility_provider" >  Long Island Power Authority (LIPA)    </option>
+<option  name="utility_provider" >  Lorain Medina Rural Electric Cooperative    </option>
+<option  name="utility_provider" >  Los Angeles Department of Water and Power   </option>
+<option  name="utility_provider" >  Louisville Gas & Electric   </option>
+<option  name="utility_provider" >  Lower Colorado River Authority    </option>
+<option  name="utility_provider" >  Lower Valley Energy   </option>
+<option  name="utility_provider" >  Lumbee River EMC    </option>
+<option  name="utility_provider" >  Luminant    </option>
+<option  name="utility_provider" >  Madison Gas and Electric    </option>
+<option  name="utility_provider" >  Magic Valley    </option>
+<option  name="utility_provider" >  Magnolia Electric   </option>
+<option  name="utility_provider" >  Mansfield Municipal Electric    </option>
+<option  name="utility_provider" >  Marblehead Electric Light Department    </option>
+<option  name="utility_provider" >  Marshall Municipal Utilities    </option>
+<option  name="utility_provider" >  Mason County Public Utility District 3    </option>
+<option  name="utility_provider" >  Massachusetts Electric    </option>
+<option  name="utility_provider" >  Massachusetts Municipal Wholesale Electric Company (MMWEC)    </option>
+<option  name="utility_provider" >  Massena Electric Department   </option>
+<option  name="utility_provider" >  Maui Electric Company   </option>
+<option  name="utility_provider" >  MDU   </option>
+<option  name="utility_provider" >  Memphis Light Gas and Water   </option>
+<option  name="utility_provider" >  Met-Ed    </option>
+<option  name="utility_provider" >  MidAmerican Energy    </option>
+<option  name="utility_provider" >  Midwest Energy    </option>
+<option  name="utility_provider" >  Minnesota Power   </option>
+<option  name="utility_provider" >  Minnkota Power Cooperative    </option>
+<option  name="utility_provider" >  Mississippi Power Company   </option>
+<option  name="utility_provider" >  Missouri River Energy Services    </option>
+<option  name="utility_provider" >  Modesto Irrigation District   </option>
+<option  name="utility_provider" >  Mojave Electric Cooperative   </option>
+<option  name="utility_provider" >  Montana Electric Cooperatives' Association    </option>
+<option  name="utility_provider" >  Montana-Dakota Utilities    </option>
+<option  name="utility_provider" >  Mountain Utilities    </option>
+<option  name="utility_provider" >  Municipal Light & Power   </option>
+<option  name="utility_provider" >  Nantucket Electric    </option>
+<option  name="utility_provider" >  Narragansett Electric   </option>
+<option  name="utility_provider" >  Nashville Electric Service    </option>
+<option  name="utility_provider" >  National Grid   </option>
+<option  name="utility_provider" >  Navopache Electric Cooperative    </option>
+<option  name="utility_provider" >  Nebraska Public Power District    </option>
+<option  name="utility_provider" >  Nevada Power    </option>
+<option  name="utility_provider" >  New York Power Authority (NYPA)   </option>
+<option  name="utility_provider" >  New York State Electric & Gas (NYSEG)   </option>
+<option  name="utility_provider" >  New-Mac Electric    </option>
+<option  name="utility_provider" >  Norris Electric Cooperative   </option>
+<option  name="utility_provider" >  North Carolina Electric Membership Corp.    </option>
+<option  name="utility_provider" >  North Little Rock Electric    </option>
+<option  name="utility_provider" >  Northeast Utilities   </option>
+<option  name="utility_provider" >  Northern Indiana Public Service Company   </option>
+<option  name="utility_provider" >  Northern Neck Electric Cooperative    </option>
+<option  name="utility_provider" >  Northwestern Energy   </option>
+<option  name="utility_provider" >  NOVEC   </option>
+<option  name="utility_provider" >  NRG Energy    </option>
+<option  name="utility_provider" >  NSTAR   </option>
+<option  name="utility_provider" >  NV Energy   </option>
+<option  name="utility_provider" >  Ocala Electric    </option>
+<option  name="utility_provider" >  Ohio Edison   </option>
+<option  name="utility_provider" >  Oklahoma Gas & Electric   </option>
+<option  name="utility_provider" >  Omaha Public Power District   </option>
+<option  name="utility_provider" >  Oncor Electric (Formerly TXU)   </option>
+<option  name="utility_provider" >  Orange & Rockland   </option>
+<option  name="utility_provider" >  Orlando Utilities Commission    </option>
+<option  name="utility_provider" >  Otter Tail Power Company    </option>
+<option  name="utility_provider" >  Overton Power District No 5   </option>
+<option  name="utility_provider" >  Owensboro Municipal Utilities   </option>
+<option  name="utility_provider" >  Pacific Gas & Electric    </option>
+<option  name="utility_provider" >  PacifiCorp    </option>
+<option  name="utility_provider" >  PacifiCorp (Pacific Power)    </option>
+<option  name="utility_provider" >  PacifiCorp (Rocky Mountain Power)   </option>
+<option  name="utility_provider" >  Pasadena Water & Power    </option>
+<option  name="utility_provider" >  Peabody Municipal Light Plant   </option>
+<option  name="utility_provider" >  PECO    </option>
+<option  name="utility_provider" >  Pedernales Electric Cooperative   </option>
+<option  name="utility_provider" >  Penelec   </option>
+<option  name="utility_provider" >  Penn Power    </option>
+<option  name="utility_provider" >  Pennywise Power   </option>
+<option  name="utility_provider" >  People    </option>
+<option  name="utility_provider" >  PEPCO   </option>
+<option  name="utility_provider" >  Pike County Light & Power Company   </option>
+<option  name="utility_provider" >  Portland General Electric   </option>
+<option  name="utility_provider" >  Potomoc Edison (FirstEnergy)    </option>
+<option  name="utility_provider" >  PowerSouth Energy Cooperative   </option>
+<option  name="utility_provider" >  PPL   </option>
+<option  name="utility_provider" >  Progress Energy Carolinas   </option>
+<option  name="utility_provider" >  Progress Energy Florida   </option>
+<option  name="utility_provider" >  Public Service Company of New Mexico    </option>
+<option  name="utility_provider" >  Public Service Company of Oklahoma    </option>
+<option  name="utility_provider" >  Public Service Electric and Gas Company (PSE&G)   </option>
+<option  name="utility_provider" >  Public Service of NH    </option>
+<option  name="utility_provider" >  Puget Sound Energy    </option>
+<option  name="utility_provider" >  PWC Fayetteville    </option>
+<option  name="utility_provider" >  Randolph Electric Membership Corp   </option>
+<option  name="utility_provider" >  Rappahannock Electric Cooperative   </option>
+<option  name="utility_provider" >  Redding Electric Utility (REU)    </option>
+<option  name="utility_provider" >  Reliant Energy    </option>
+<option  name="utility_provider" >  River Falls Municipal Utility   </option>
+<option  name="utility_provider" >  Riverside Public Utilities    </option>
+<option  name="utility_provider" >  Rochester Gas & Electric    </option>
+<option  name="utility_provider" >  Rochester Public Utilities    </option>
+<option  name="utility_provider" >  Rural Valley Electric Co.   </option>
+<option  name="utility_provider" >  Rushmore Electric Cooperative   </option>
+<option  name="utility_provider" >  Sacramento Municipal Utility District   </option>
+<option  name="utility_provider" >  Salem Electric    </option>
+<option  name="utility_provider" >  Salt River Electric   </option>
+<option  name="utility_provider" >  Salt River Project    </option>
+<option  name="utility_provider" >  Sam Houston Electric    </option>
+<option  name="utility_provider" >  San Diego Gas & Electric    </option>
+<option  name="utility_provider" >  Santee Cooper   </option>
+<option  name="utility_provider" >  Sawnee EMC    </option>
+<option  name="utility_provider" >  Seattle City Light    </option>
+<option  name="utility_provider" >  SELCO   </option>
+<option  name="utility_provider" >  Shenandoah Valley Electric Cooperative    </option>
+<option  name="utility_provider" >  Sierra Pacific Power    </option>
+<option  name="utility_provider" >  Sierra-Pacific Power    </option>
+<option  name="utility_provider" >  Silicon Valley Power    </option>
+<option  name="utility_provider" >  SLECMO    </option>
+<option  name="utility_provider" >  Snohomish County Public Utility District (PUD)    </option>
+<option  name="utility_provider" >  Source Power and Gas    </option>
+<option  name="utility_provider" >  South Carolina Electric & Gas Company   </option>
+<option  name="utility_provider" >  South Central Power Company   </option>
+<option  name="utility_provider" >  Southern California Edison    </option>
+<option  name="utility_provider" >  Southern California Public Power Authority    </option>
+<option  name="utility_provider" >  Southern Maryland Electric Cooperative    </option>
+<option  name="utility_provider" >  Southern Rivers Energy    </option>
+<option  name="utility_provider" >  Southwest Mississippi Electric Power Association    </option>
+<option  name="utility_provider" >  Southwestern Electric Power Company (SWEPCO)    </option>
+<option  name="utility_provider" >  Springfield City Water Light & Power    </option>
+<option  name="utility_provider" >  Star Tex Power    </option>
+<option  name="utility_provider" >  Sterling Municipal Light Department   </option>
+<option  name="utility_provider" >  Stream Energy   </option>
+<option  name="utility_provider" >  Sulphur Springs Valley Electric Cooperative   </option>
+<option  name="utility_provider" >  Summer Energy   </option>
+<option  name="utility_provider" >  Superior Plus Utility   </option>
+<option  name="utility_provider" >  Surprise Valley Power   </option>
+<option  name="utility_provider" >  Sussex Rural Electric Cooperative   </option>
+<option  name="utility_provider" >  SWEPCO    </option>
+<option  name="utility_provider" >  Tacoma Power    </option>
+<option  name="utility_provider" >  Tara Energy   </option>
+<option  name="utility_provider" >  TECO    </option>
+<option  name="utility_provider" >  Tennessee Jackson Energy Authority    </option>
+<option  name="utility_provider" >  Tennessee Valley Authority    </option>
+<option  name="utility_provider" >  Texas Electric Service Company    </option>
+<option  name="utility_provider" >  Tideland EMC    </option>
+<option  name="utility_provider" >  Tillamook PUD   </option>
+<option  name="utility_provider" >  Toledo Edison   </option>
+<option  name="utility_provider" >  Town of Vienna    </option>
+<option  name="utility_provider" >  Tri Eagle Energy    </option>
+<option  name="utility_provider" >  Trico Electric Cooperative    </option>
+<option  name="utility_provider" >  Tri-County Electric   </option>
+<option  name="utility_provider" >  Trinity PUD   </option>
+<option  name="utility_provider" >  Trinity Valley Electric Cooperative   </option>
+<option  name="utility_provider" >  Tucson Electric Power   </option>
+<option  name="utility_provider" >  Turlock Irrigation District (TID)   </option>
+<option  name="utility_provider" >  UGI Utilities   </option>
+<option  name="utility_provider" >  UniSource Energy Services   </option>
+<option  name="utility_provider" >  United Cooperative Services   </option>
+<option  name="utility_provider" >  United Illuminating   </option>
+<option  name="utility_provider" >  United Power Inc    </option>
+<option  name="utility_provider" >  Unitil Corporation    </option>
+<option  name="utility_provider" >  Upper Missouri G&T Cooperative    </option>
+<option  name="utility_provider" >  Upper Peninsula Power Company   </option>
+<option  name="utility_provider" >  Valley Electric Association   </option>
+<option  name="utility_provider" >      
+<option  name="utility_provider" >  Vineland Municipal Electric Utility   </option>
+<option  name="utility_provider" >  Wake Electric   </option>
+<option  name="utility_provider" >  Wakefield Municipal Gas and Light Department    </option>
+<option  name="utility_provider" >  Wallingford Electric    </option>
+<option  name="utility_provider" >  Wasco Electric    </option>
+<option  name="utility_provider" >  Washington - St. Tammany Electric Cooperative   </option>
+<option  name="utility_provider" >  We Energies   </option>
+<option  name="utility_provider" >  Weakley County Municipal Electric System    </option>
+<option  name="utility_provider" >  Wellsboro Electric Company    </option>
+<option  name="utility_provider" >  West Oregon Electric Cooperative    </option>
+<option  name="utility_provider" >  Westar Energy   </option>
+<option  name="utility_provider" >  Western Massachusetts Electric    </option>
+<option  name="utility_provider" >  Wheeling Electric Power (AEP Ohio)    </option>
+<option  name="utility_provider" >  WIlson Energy   </option>
+<option  name="utility_provider" >  Wiregrass Electric Cooperative    </option>
+<option  name="utility_provider" >  Wisconsin Power and Light Company   </option>
+<option  name="utility_provider" >  Wisconsin Public Service Corporation    </option>
+<option  name="utility_provider" >  Withlacoochee River Electric Cooperative    </option>
+<option  name="utility_provider" >  WTU Retail Energy   </option>
+<option  name="utility_provider" >  Wyandotte Municipal Services    </option>
+<option  name="utility_provider" >  Xcel Energy   </option>
+<option  name="utility_provider" >  XOOM Energy   </option>
+
+              </select>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+        var demo1 = new BVSelect({
+          selector: "#selectbox",
+          searchbox: false,
+          offset: false
+              });
+          });
+                </script>
+
+                <!-- select khtm -->
+                <br><br>
+                    <input style="width: 70%; border-radius: 17px" type="text" name="service" placeholder="Type Your Own And Continue"/><br><br>
+                    
+                    <input type="button" name="next" class="next action-button" value="CONTINUE"/><br><br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">What is your Best Call Time?</h2>
+                <p class="pwala">Choose your Time:</p>
+                <br><br>
+                <!-- select -->
+
+                 <select name="best_call_time" id="selectbox">
+                  <option  name="best_call_time" > Afternoon</option>
+                  <option  name="best_call_time" >Anytime </option>
+                  <option  name="best_call_time" > Evening</option>
+                  <option  name="best_call_time" >  Morning </option>
+
+
+              </select>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+        var demo1 = new BVSelect({
+          selector: "#selectbox",
+          searchbox: false,
+          offset: false
+              });
+          });
+                </script>
+
+                <!-- select khtm -->
+                <br><br>
+                    
+                    <input type="button" name="next" class="next action-button" value="CONTINUE"/><br><br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">What is your Credit Rating?</h2>
+                <p class="pwala">Choose your Rating:</p>
+                <br><br>
+                <!-- select -->
+
+                 <select name="credit_rating" id="selectbox">
+                  <option  name="credit_rating" > Excellent</option>
+                  <option  name="credit_rating" >Fair</option>
+                  <option  name="credit_rating" > Good</option>
+                  <option  name="credit_rating" > Poor </option>
+
+
+              </select>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+        var demo1 = new BVSelect({
+          selector: "#selectbox",
+          searchbox: false,
+          offset: false
+              });
+          });
+                </script>
+
+                <!-- select khtm -->
+                <br><br>
+                    
+                    <input type="button" name="next" class="next action-button" value="CONTINUE"/><br><br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">What is your Purchase Time Frame?</h2>
+                <p class="pwala">Choose your Purchase Time Frame:</p>
+                <br><br>
+                <!-- select -->
+
+                 <select name="purchase_time_frame" id="selectbox">
+                  <option  name="purchase_time_frame" > 1-3 months</option>
+                  <option  name="purchase_time_frame" >3+ months</option>
+                  <option  name="purchase_time_frame" > Immediately</option>
+                  <option  name="purchase_time_frame" > Within 1 months </option>
+
+
+              </select>
+                <script type="text/javascript">
+                  document.addEventListener("DOMContentLoaded", function() {
+        var demo1 = new BVSelect({
+          selector: "#selectbox",
+          searchbox: false,
+          offset: false
+              });
+          });
+                </script>
+
+                <!-- select khtm -->
+                <br><br>
+                    
+                    <input type="button" name="next" class="next action-button" value="CONTINUE"/><br><br>
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">We've found companies interested<br>in sending you quotes!</h2>
+                <br>
+                    <input class="buuttoon"  type="text" name="first_name" placeholder="Fist name"/>
+                    <input class="buuttoon" type="text" name="last_name" placeholder="Last name"/>
+                    <input class="buuttoon" type="text" name="email_address" placeholder="Email"/>
+                    <input class="buuttoon" type="text" name="phone_home" placeholder="Home phone"/><br>
+                      
+                    
+                    <p class="pwala2"><input type="hidden" id="leadid_tcpa_disclosure" /><label for="leadid_tcpa_disclosure" style="background-color:rgba(255,0,0,0.8);border:none;">By submitting this request, you authorize TheSolarPower.info, our partners, up to four solar installation companies to place advertising or promotional calls and/or SMS/MMS messages (including text messages) to you on the phone number you provided using autodialed and prerecorded/artificial voice calls and/or messages even if your number is on any federal, state or local do not call list. Message and data rates may apply. Message frequency varies. Text &#8216;Help&#8217; for help. Text &#8216;Stop&#8217; to cancel. Your consent to this agreement is not required to purchase products or services. We respect your privacy. California Residents: Do Not Contact.</label></p>
+                  <p>
+                      <input type="checkbox" id="tcc" name="tcpa_compliant" onclick="typenext()"  value="yes" style="width: 5%;">
+                      I agree to the terms of agreement.
+                    </p>
+                  <br><br>
+                  <a href="solar.html"><input type="button"  class="action-button-previous" value="HOME"/></a>
+                <input type="submit" id="sub2" name="submit" class="submit action-button" value="Submit"/><br><br>
+            </fieldset><br>
+            <img class="image3" src ="barimg.png">
+            <!-- hidden fields -->
+            <input type="hidden" id="landing_page" name="landing_page_url" value="https://thesolarpower.info">
+
+
+                          <input type="hidden" name="lp_offer_id" value="10" /> 
+              <input type="hidden" name="lp_campaign_id" value="60f04c284fa85" />   
+  
+              <!-- The rest of the fields name must match what you have set in the vertical -->   
+              <input type="hidden" name="lp_redirect_url" value="https://thesolarpower.info/submitted.html" /> 
+              <!-- lp_redirect_url: Optional redirect url when the lead is accepted -->  
+              <input type="hidden" name="lp_redirect_fail_url" value="https://thesolarpower.info/submitted.html" /> 
+              <!-- lp_redirect_fail_url: Optional redirect url when the lead is rejected. --> 
+
+              <input type="hidden" id="trusted_form_cert_id" name="trusted_form_cert_id">
+
+                <!-- <input type="hidden" id="lp_campaign_key" name="lp_campaign_key" value="lp_campaign_key"> -->
+
+                 <input type="hidden" id="lp_s1" value="lp_s1" name="lp_s1">
+                
+                <input type="hidden" id="lp_s2" value="lp_s2" name="lp_s2">
+                
+                <input id="leadid_token" name="jornaya_lead_id" type="hidden" value=""/>
+                
+                
+                
+<!-- 
+                <input type="hidden" id="lp_s3" name="lp_s3" value="test">
+
+                <input type="hidden" id="lp_s4" name="lp_s4" value="test">
+
+                <input type="hidden" id="lp_s5" name="lp_s5" value="test"> -->
+
+                <input type="hidden" id="lp_test" name="lp_test" value="test">
+
+                <input type="hidden" id="data" name="ip_address" value="">
+
+
+
+                
+                        <!-- lp_redirect_url: Optional redirect url when the lead is accepted -->  
+                
+
+                <input type="hidden" id="landing_page" name="landing_page" value="https://thesolarpower.info">
+
+                <input type="hidden" id="tcpa_consent_text" name="tcpa_consent_text" value="By submitting this request, you authorize TheSolarPower.info, our partners, up to four solar installation companies to place advertising or promotional calls and/or SMS/MMS messages (including text messages) to you on the phone number you provided using autodialed and prerecorded/artificial voice calls and/or messages even if your number is on any federal, state or local do not call list. Message and data rates may apply. Message frequency varies. Text “Help” for help. Text “Stop” to cancel. Your consent to this agreement is not required to purchase products or services. We respect your privacy. California Residents: Do Not Contact.">
+
+                <input type="hidden" id="user_agent" name="user_agent" value="">
+
+              
+            <!-- hidden fields khtm -->
+        </form>
+          <br><br>
+        
+    </div>
+</div>
+</div>
+<!-- scrpt of foarm -->
+<script>
+    var ua = navigator.userAgent;
+var info = {
+        browser: /Edge\/\d+/.test(ua) ? 'ed' : /MSIE 9/.test(ua) ? 'ie9' : /MSIE 10/.test(ua) ? 'ie10' : /MSIE 11/.test(ua) ? 'ie11' : /MSIE\s\d/.test(ua) ? 'ie?' : /rv\:11/.test(ua) ? 'ie11' : /Firefox\W\d/.test(ua) ? 'ff' : /Chrom(e|ium)\W\d|CriOS\W\d/.test(ua) ? 'gc' : /\bSafari\W\d/.test(ua) ? 'sa' : /\bOpera\W\d/.test(ua) ? 'op' : /\bOPR\W\d/i.test(ua) ? 'op' : typeof MSPointerEvent !== 'undefined' ? 'ie?' : '',
+        os: /Windows NT 10/.test(ua) ? "win10" : /Windows NT 6\.0/.test(ua) ? "winvista" : /Windows NT 6\.1/.test(ua) ? "win7" : /Windows NT 6\.\d/.test(ua) ? "win8" : /Windows NT 5\.1/.test(ua) ? "winxp" : /Windows NT [1-5]\./.test(ua) ? "winnt" : /Mac/.test(ua) ? "mac" : /Linux/.test(ua) ? "linux" : /X11/.test(ua) ? "nix" : "",
+        touch: 'ontouchstart' in document.documentElement,
+        mobile: /IEMobile|Windows Phone|Lumia/i.test(ua) ? 'w' : /iPhone|iP[oa]d/.test(ua) ? 'i' : /Android/.test(ua) ? 'a' : /BlackBerry|PlayBook|BB10/.test(ua) ? 'b' : /Mobile Safari/.test(ua) ? 's' : /webOS|Mobile|Tablet|Opera Mini|\bCrMo\/|Opera Mobi/i.test(ua) ? 1 : 0,
+        tablet: /Tablet|iPad/i.test(ua),
+};
+document.getElementById('user_agent').value = ua;
+</script>
+<script 
+src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+      
+        <script>
+            /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+      
+            $.getJSON("https://api.ipify.org?format=json",
+                                              function(data) {
+      
+                // Setting text of element P with id gfg
+                $("#data").html(data.ip);
+            })
+        </script>
+<script type="text/javascript">
+</script>
+
+<script id="LeadiDscript" type="text/javascript">
+(function() {
+var s = document.createElement('script');
+s.id = 'LeadiDscript_campaign';
+s.type = 'text/javascript';
+s.async = true;
+s.src = '//create.lidstatic.com/campaign/5f66e54c-7c33-3661-8a7b-9b7c885f93d6.js?snippet_version=2';
+var LeadiDscript = document.getElementById('LeadiDscript');
+LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+})();
+</script>
+<noscript><img src='//create.leadid.com/noscript.gif?lac=0f8580e1-10b6-a5ab-b0df-1a2b8cf787af&lck=5f66e54c-7c33-3661-8a7b-9b7c885f93d6&snippet_version=2' /></noscript>
+
+<script type="text/javascript">
+        (function() {
+        var field = 'trusted_form_cert_id';
+        var provideReferrer = false;
+        var invertFieldSensitivity = false;
+        var tf = document.createElement('script');
+        tf.type = 'text/javascript'; tf.async = true;
+        tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+        '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&invert_field_sensitivity=' + invertFieldSensitivity;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+        )();
+        </script>
+        <noscript>
+        <img src="http://api.trustedform.com/ns.gif" />
+        </noscript>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            $.getJSON("https://api.ipify.org?format=json", function(data) { 
+        
+                $("#ip").html(data.ip); 
+                
+            }) 
+        
+        </script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script>
+    setTimeout(function(){
+      if ($('#msg').length > 0){
+        $('#msg').remove();
+      }
+    }, 1)
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script>
+    setTimeout(function(){
+      if ($('#msg').length > 0){
+        $('#msg').remove();
+      }
+    }, 1)
+
+    // <!-- User Agent -->
+  </script> 
+
+
+<!-- scrpt of foarmkhtm -->
+<!-- second page -->
+
+  <br><br><h1 class="text-center " ><b>How It Works?</b></h1><br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="dottxxt">
+        <h1><b>Step 1</b></h1>
+        <h3>Take Our Quick Quick Surve</h3>
+        <h5 class="dotcolor">We use this to determine and configure the best deals, local incentives andtrusted installers.</h5>
+      </div>
+      <div class="dottxxt2">
+        <h1><b>Step 3</b></h1>
+        <h3>You Pick The Best Deals</h3>
+        <h5 class="dotcolor">Presenting you with first-rate solar deals tailored to your situation. It really is that fast and  simple.</h5>
+      </div>
+    </div>
+    <div class="col-md-4 meee"><br>
+      <span class="dot marker"></span>
+      <div class="vertical_dotted_line"></div>
+        <span class="dot marker"></span>
+         <hr class="new3">
+
+      <div class="vertical_dotted_line"></div>
+        <span class="dot marker"></span>
+        <hr class="new4">
+        <div class="vertical_dotted_line"></div>
+        <hr class="new5">
+      
+  </div>
+    <div class="col-md-4">
+    <div class="dottxxt1">
+        <h1><b>Step 2</b></h1>
+        <h3>We Coonects The Dots</h3>
+        <h5 class="dotcolor">Our propietary connects yoy to top rated solar partners.Finding you the most money saving options available.</h5>
+      </div>
+       <div class="dottxxt5">
+        <h1><b>Step 3</b></h1>
+        <h3>You Pick The Best Deals</h3>
+        <h5 class="dotcolor">Presenting you with first-rate solar deals tailored to your situation. It really is that fast and  simple.</h5>
+      </div>
+  </div>
+  </div><br><br>
+  <!-- second page khtm -->
+  <!-- akhrii kam -->
+    <div class="mukchuk text-center">
+            <br><br>
+      <h1><b>Save Upto <b style="color: #9B0707">20%</b> Of Installation Costs Through Federal Tax Credtits Untill 2021!</b></h1>
+      <br><br>
+    </div>
+    <div class="mukchuk1 ">
+            <br><br>
+            <div class="text-center">
+      <h1 class="barakaro"><b>Get Get Your <b style="color: #2EEA11">FREE</b> Solar Estimates <b style="color: #9B0707">NOW!</b></b></h1>
+      <h1>Take our quick survey & be connected to trusted <br>installers</h1><br>
+     <a href="#up"><input type="button"  name="next" class="lastbtt" value="Get Your free Quote Today"/></a> 
+      <br><br><br><br>
+        </div>
+
+        
+    </div>
+  <div class="bback">
+          <br>
+            <h4 class="text-center"><b>Copyright 2021.All rights reserved</b></h4>
+            <hr class="alaa">
+           <!-- overlay k shahkay -->
+           <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="overlay-content"><h1 style="color: red !important">Privacy $ Policy</h1>
+                <p style="color: white !important">
+                Online certification or "seal" programs are an example of industry self-regulation of privacy policies. Seal programs usually require implementation of fair information practices as determined by the certification program and may require continued compliance monitoring. TRUSTArc (formerly TRUSTe),[40] the first online privacy seal program, included more than 1,800 members by 2007.[41] Other online seal programs include the Trust Guard Privacy Verified program,[42] eTrust,[43] and Webtrust.<br><br>
+              Some websites also define their privacy policies using P3P or Internet Content Rating Association (ICRA), allowing browsers to automatically assess the level of privacy offered by the site, and allowing access only when the site's privacy practices are in line with the user's privacy settings. However, these technical solutions do not guarantee websites actually follows the claimed privacy policies. These implementations also require users to have a minimum level of technical knowledge to configure their own browser privacy settings</p>
+              </div>
+            </div>
+            <div id="myNav1" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+              <div class="overlay-content"><h1 style="color: red !important">Terms & Conditions</h1>
+                <p style="color: white !important">
+                Use of this site is provided by Demos subject to the following Terms and Conditions:<br>
+1. Your use constitutes acceptance of these Terms and Conditions as at the date of your first use of the site.<br>
+2. Demos reserves the rights to change these Terms and Conditions at any time by posting changes online. Your continued use of this site after changes are posted constitutes your acceptance of this agreement as modified.<br>
+3. You agree to use this site only for lawful purposes, and in a manner which does not infringe the rights, or restrict, or inhibit the use and enjoyment of the site by any third party.<br>
+4. This site and the information, names, images, pictures, logos regarding or relating to Demos are provided “as is” without any representation or endorsement made and without warranty of any kind whether express or implied. In no event will Demos be liable for any damages including, without limitation, indirect or consequential damages, or any damages whatsoever arising from the use or in connection with such use or loss of use of the site, whether in contract or in negligence.<br>
+              </p>
+              </div>
+            </div>
+           <script>
+              function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+              }
+
+              function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+              }
+              function openNav1() {
+                document.getElementById("myNav1").style.width = "100%";
+              }
+
+              function closeNav1() {
+                document.getElementById("myNav1").style.width = "0%";
+              }
+              </script>
+           <!-- overlay k shahkay khtm -->
+            <p style="margin-bottom: 1%; color: white; text-align: center;">
+              <span style="cursor:pointer" onclick="openNav()">Privacy $ Policy</span>
+              &nbsp;&nbsp;&nbsp; &nbsp;
+              <span style="cursor:pointer" onclick="openNav1()">Terms & Conditions</span>
+             &nbsp;&nbsp;&nbsp; &nbsp;
+              <a href="mailto:contact@thesolarpower.info" style="color: white !important" class="text-middle">Contact Us</a></p><br>
+          </div>
+<!-- akhrii kam -->
+
+
+
+
+<!-- /.MultiStep Form -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<!-- jQuery easing plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  
+  function typenext() {
+                var type = document.getElementsByName('tcpa_compliant');
+                if (type.checked) {
+                    document.getElementById('sub2').disabled = false;
+                }
+    }
+</script>
+<script type="text/javascript">
+  
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+  if(animating) return false;
+  animating = true;
+  
+  current_fs = $(this).parent();
+  next_fs = $(this).parent().next();
+  
+  //activate next step on progressbar using the index of next_fs
+  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+  
+  //show the next fieldset
+  next_fs.show(); 
+  //hide the current fieldset with style
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale current_fs down to 80%
+      scale = 1 - (1 - now) * 0.2;
+      //2. bring next_fs from the right(50%)
+      left = (now * 50)+"%";
+      //3. increase opacity of next_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+      next_fs.css({'left': left, 'opacity': opacity});
+    }, 
+    duration: 800, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack'
+  });
+});
+
+$(".previous").click(function(){
+  if(animating) return false;
+  animating = true;
+  
+  current_fs = $(this).parent();
+  previous_fs = $(this).parent().prev();
+  
+  //de-activate current step on progressbar
+  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+  
+  //show the previous fieldset
+  previous_fs.show(); 
+  //hide the current fieldset with style
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale previous_fs from 80% to 100%
+      scale = 0.8 + (1 - now) * 0.2;
+      //2. take current_fs to the right(50%) - from 0%
+      left = ((1-now) * 50)+"%";
+      //3. increase opacity of previous_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({'left': left});
+      previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+    }, 
+    duration: 800, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    //this comes from the custom easing plugin
+    easing: 'easeInOutBack'
+  });
+});
+
+
+</script>
+<script>
+        
+      
+        function storeurl() {
+            var url_string = document.URL; //window.location.href
+            var url = new URL(url_string);
+            var affid = url.searchParams.get("affid");
+            console.log("value",affid);
+            var tid = url.searchParams.get("tid"); 
+            console.log("value",tid);
+            document.getElementById('lp_s1').value = affid;
+            console.log( document.getElementById('lp_s1').value);
+            document.getElementById('lp_s2').value = tid;
+            console.log( document.getElementById('lp_s2').value);
+            
+        }
+    </script>
+<!-- form validation -->
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</body>
+</html>
